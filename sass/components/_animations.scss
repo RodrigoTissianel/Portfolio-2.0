@@ -1,0 +1,31 @@
+//=====================================================
+//=============== HEADER LOGO ANIMATION ===============
+//=====================================================
+
+.logo-svg {
+    animation: logo 16s ease infinite;
+    transform-box: fill-box;
+    opacity: 0;
+}
+
+@keyframes logo {
+    0% {
+        stroke-dasharray: 1 48;
+        stroke-dashoffset: 0;
+        opacity: 0;
+        fill-opacity: 0;
+    }
+    15%,
+    85% {
+        stroke-dasharray: 48 0;
+        stroke-dashoffset: 48;
+        opacity: 1;
+        fill-opacity: 1;
+    }
+    100% {
+        stroke-dasharray: 1 48;
+        stroke-dashoffset: 0;
+        opacity: 0;
+        fill-opacity: 0;
+    }
+}

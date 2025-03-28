@@ -1,0 +1,12 @@
+a{
+    cursor: pointer;
+    display: inline-block;
+    color: $white-normal;
+    text-decoration: none;
+    transition: .5s ease;
+    @include typeface-2(p2, desktop);
+
+    &:hover{
+        opacity: .7;
+    }
+}
