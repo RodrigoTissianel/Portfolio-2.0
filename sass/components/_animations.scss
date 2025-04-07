@@ -29,3 +29,71 @@
         fill-opacity: 0;
     }
 }
+
+//=====================================================
+//============= WOORKS SECTION ANIMATION ==============
+//=====================================================
+
+.icon-arrows-big {
+    transform-box: fill-box;
+    transform-origin: center center;
+    animation: arrows-down 2s ease infinite alternate;
+}
+.icon-arrows-small {
+    transform-box: fill-box;
+    transform-origin: center center;
+    animation: arrows-down 2s 0.2s ease infinite alternate;
+}
+
+@keyframes arrows-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(6px);
+    }
+}
+
+//=====================================================
+//============= ABOUT SECTION ANIMATION ==============
+//=====================================================
+
+.photos-left {
+    transform-box: fill-box;
+    transform-origin: center center;
+    animation: slide-down 20s linear infinite;
+    will-change: transform;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-201.5%);
+    }
+}
+
+.photos-right {
+    transform-box: fill-box;
+    transform-origin: center center;
+    animation: slide-up 20s linear infinite;
+    will-change: transform;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(201.5%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .photos-left,
+    .photos-right {
+        animation: none;
+        transform: none;
+    }
+}
